@@ -12,13 +12,20 @@
     font-weight: 400;
     letter-spacing: 10px;
     color: #FFFFFF;
-    width: 200px;
+    width: $sidebar-width;
     @media (max-width: $screen-sm-max) {
-        width: 100px;
+        width : $sidebar-mobile-width;
     }
 }
 
 .navbar-default .navbar-brand {
+
+    @include nav-brand-logo('desktop');
+
+    @media (max-width: $screen-sm-max) {
+        @include nav-brand-logo('mobile');
+    }
+
     color: #FFFFFF;
 }
 
