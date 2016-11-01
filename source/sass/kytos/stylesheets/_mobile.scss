@@ -1,0 +1,21 @@
+body {
+  &.mobile {
+
+    .navbar-default .navbar-brand,
+    .navbar-default .navbar-brand:focus{
+        width: $sidebar-mobile-width;
+        @include nav-brand-logo('mobile');
+    }
+
+    .sidebar {
+      @include sidebar-mobile();
+     .nav-info {
+        display: none!important;
+      }
+    }
+
+    .terminal {
+      @include terminal-mobile();
+    }
+  }
+}
