@@ -3,7 +3,7 @@
     font-size: 11px;
     border: 0;
     margin-top: 0;
-    margin-left: 200px;
+    margin-left: $sidebar-width;
     padding: 0;
     width: calc(100% - 200px);
     position: fixed;
@@ -12,9 +12,9 @@
     height: 30vh;
     color: #adadad;
     @media (max-width: $screen-sm-max) {
-        margin-left: 100px;
-        width: calc(100% - 102px);
+        @include terminal-mobile();
     }
+
 
     &.closed {
         display: none;
@@ -78,7 +78,7 @@
 
     .terminal-body {
         font-family: monospace;
-        padding: 5px;
+        padding: 2px 0 0 0;
         background: #24262d;
         height: 100%;
     }
