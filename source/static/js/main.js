@@ -96,4 +96,23 @@ $(window).ready(function(){
   load_layouts();
   draw_background_map(draw_topology);
 
-})
+});
+
+$(document).ready(function() {
+  var i = 1;
+  $('.progress-hosts .circle').removeClass().addClass('circle');
+  $('.progress-hosts .bar').removeClass().addClass('bar');
+  setInterval(function() {
+    $('.progress-hosts .circle:nth-of-type(' + i + ')').addClass('active');
+    $('.progress-hosts .circle:nth-of-type(' + (i - 1) + ')').removeClass('active').addClass('done');
+    $('.progress-hosts .circle:nth-of-type(' + (i - 1) + ') .label').html('&#10003;');
+    $('.progress-hosts .bar:nth-of-type(' + (i - 1) + ')').addClass('active');
+    $('.progress-hosts .bar:nth-of-type(' + (i - 2) + ')').removeClass('active').addClass('done');
+    i++;
+    if (i == 0) {
+      $('.progress-hosts .bar').removeClass().addClass('bar');
+      $('.progress-hosts div.circle').removeClass().addClass('circle');
+      i = 1;
+    }
+  }, 1000);
+});

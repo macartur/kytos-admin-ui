@@ -1,0 +1,19 @@
+.host-origin {
+  min-height: 100px;
+}
+
+.host-destination {
+  &:before {
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid $kytos-cover-color;
+    border-top: 30px solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -40px;
+    top: 15px;
+  }
+
+  min-height: 100px;
+}

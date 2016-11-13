@@ -150,7 +150,7 @@
             <div class="terminal-title">
               <ul class="nav nav-pills kytos-nav-pills terminal-tabs">
                 <li id='tab_terminal_button' class="active"><a  data-toggle="pill" href="#tab_terminal"><i class="fa fa-terminal"></i> Terminal</a></li>
-                <li id='tab_context_button'><a data-callback-min-max="show_switch_context()" data-toggle="pill" href="#tab_context" ><i class="fa fa-eye"></i> Context</a></li>
+                <li id='tab_context_button'><a  data-toggle="pill" href="#tab_context" onclick="show_host_context()"><i class="fa fa-eye"></i> Context</a></li>
                 <li><a data-toggle="pill" href="#tab_switches"><i class="fa fa-circle-o"></i> Switches</a></li>
                 <li><a data-toggle="pill" href="#tab_logs"><i class="fa fa-list"></i> Logs</a></li>
                 <li><a data-toggle="pill" href="#tab_notifications"><i class="fa fa-bell-o"></i> Notifications</a></li>
@@ -243,7 +243,7 @@
                     <li><a href="#" data-value="None" onclick="toggle_labels('switch', 'none');">None</a></li>
                   </ul>
                 </label>
-                  <label for='host_label_dropdown'>
+                  <label class="mt" for='host_label_dropdown'>
                     Host:
                     <button class="btn btn-sm btn-kytos-default dropdown-toggle" type="button" id="host_label_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="layout-name disabled-option">Host Labels</span>
@@ -464,6 +464,62 @@
     </script>
     <!-- END: MUSTACHE TEMPLATE -->
 
+    <script id="context-host-template" type="x-tmpl-mustache">
+      <div class="row-fluid">
+        <div class="col-settings host-select col-md-5">
+          <div class="col-xs-6">
+            <div class="col-xs-12 host-origin">
+              <h1>Origin</h1>
+              <dl>
+                <dt>Host</dt>
+                <dd>00:11:22:33:44:55:66</dd>
+              </dl>
+              <dl>
+                <dt>IP</dt>
+                <dd>192.168.0.1</dd>
+              </dl>
+
+            </div>
+          </div>
+          <div class="col-xs-6 host-destination">
+          <h1>Destination</h1>
+            <p>Please, select a second host</p>
+          </div>
+        </div>
+        <div class="col-settings col-md-6">
+          <h1>5 paths found</h1>
+          <div class="progress-hosts">
+            <div class="circle done">
+              <span class="label">1</span>
+              <span class="title">Host 1</span>
+            </div>
+            <span class="bar done"></span>
+            <div class="circle done">
+              <span class="label">2</span>
+              <span class="title">Host 2</span>
+            </div>
+            <span class="bar half"></span>
+            <div class="circle active">
+              <span class="label">3</span>
+              <span class="title">Host 3</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">4</span>
+              <span class="title">Host 4</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">5</span>
+              <span class="title">Host 5</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </script>
+
+
     <script language="javascript">
       function show_switch_context(data) {
         // redraw svg on maximize or minimize window
@@ -477,6 +533,14 @@
           $('#context_target').html(rendered).attr("data-data", JSON.stringify(data, null, 2) );
           plot_radar(data.interfaces);
       }
+
+      function show_host_context() {
+          var template = $('#context-host-template').html();
+          Mustache.parse(template);   // optional, speeds up future uses
+          var rendered = Mustache.render(template);
+          $('#context_target').html(rendered); //.attr("data-data", JSON.stringify(data, null, 2) );
+      }
+
 
     </script>
 </body>
