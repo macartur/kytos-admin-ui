@@ -465,27 +465,39 @@
     <!-- END: MUSTACHE TEMPLATE -->
 
     <script id="context-host-template" type="x-tmpl-mustache">
-      <div class="row-fluid">
-        <div class="col-settings host-select col-md-5">
+      <div class="row-fluid host-selection">
+        <div class="col-settings host-select col-md-12 no-padding no-border">
           <div class="col-xs-6 host-origin">
-              <h1>Origin</h1>
-              <dl>
-                <dt>Host</dt>
-                <dd>00:11:22:33:44:55:66</dd>
-              </dl>
-              <dl>
-                <dt>IP</dt>
-                <dd>192.168.0.1</dd>
-              </dl>
-
+            <h1>From:</h1>
+            <dl>
+              <dt>Host</dt>
+              <dd>00:11:22:33:44:55:66</dd>
+            </dl>
+            <dl>
+              <dt>IP</dt>
+              <dd>192.168.0.1</dd>
+            </dl>
           </div>
           <div class="col-settings col-xs-6 host-destination">
-          <h1>Destination</h1>
-            <p>Please, select a second host</p>
+            <h1>To:</h1>
+            <dl>
+              <dt>Host</dt>
+              <dd>00:11:22:33:44:55:66</dd>
+            </dl>
+            <dl>
+              <dt>IP</dt>
+              <dd>192.168.0.1</dd>
+            </dl>
           </div>
         </div>
-        <div class="col-settings col-md-6">
-          <h1>5 paths found</h1>
+      </div>
+
+        <div class="result-text text-center">
+          <h2>We found 5 paths from <strong>00:11:22:33:44:55:66</strong> to <strong>00:11:22:33:44:55:66</strong></h2>
+        </div>
+        <div class="col-settings col-md-12">
+
+          <!--// Row 1 -->
           <div class="progress-hosts">
             <div class="circle done">
               <span class="label">1</span>
@@ -511,7 +523,138 @@
               <span class="label">5</span>
               <span class="title">Host 5</span>
             </div>
+            <div class="apply">
+              <a class="btn btn-kytos-default">Aplly</a>
+            </div>
+
           </div>
+          <!--// Row 1 -->
+          <div class="progress-hosts">
+            <div class="circle done">
+              <span class="label">1</span>
+              <span class="title">Host 1</span>
+            </div>
+            <span class="bar done"></span>
+            <div class="circle done">
+              <span class="label">2</span>
+              <span class="title">Host 2</span>
+            </div>
+            <span class="bar half"></span>
+            <div class="circle active">
+              <span class="label">3</span>
+              <span class="title">Host 3</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">4</span>
+              <span class="title">Host 4</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">5</span>
+              <span class="title">Host 5</span>
+            </div>
+            <div class="apply">
+              <a class="btn btn-kytos-default">Aplly</a>
+            </div>
+
+          </div>
+
+          <!--// Row 1 -->
+          <div class="progress-hosts">
+            <div class="circle done">
+              <span class="label">1</span>
+              <span class="title">Host 1</span>
+            </div>
+            <span class="bar done"></span>
+            <div class="circle done">
+              <span class="label">2</span>
+              <span class="title">Host 2</span>
+            </div>
+            <span class="bar half"></span>
+            <div class="circle active">
+              <span class="label">3</span>
+              <span class="title">Host 3</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">4</span>
+              <span class="title">Host 4</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">5</span>
+              <span class="title">Host 5</span>
+            </div>
+            <div class="apply">
+              <a class="btn btn-kytos-default">Aplly</a>
+            </div>
+
+          </div>
+
+          <!--// Row 1 -->
+          <div class="progress-hosts">
+            <div class="circle done">
+              <span class="label">1</span>
+              <span class="title">Host 1</span>
+            </div>
+            <span class="bar done"></span>
+            <div class="circle done">
+              <span class="label">2</span>
+              <span class="title">Host 2</span>
+            </div>
+            <span class="bar half"></span>
+            <div class="circle active">
+              <span class="label">3</span>
+              <span class="title">Host 3</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">4</span>
+              <span class="title">Host 4</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">5</span>
+              <span class="title">Host 5</span>
+            </div>
+            <div class="apply">
+              <a class="btn btn-kytos-default">Aplly</a>
+            </div>
+
+          </div>
+
+          <!--// Row 1 -->
+          <div class="progress-hosts">
+            <div class="circle done">
+              <span class="label">1</span>
+              <span class="title">Host 1</span>
+            </div>
+            <span class="bar done"></span>
+            <div class="circle done">
+              <span class="label">2</span>
+              <span class="title">Host 2</span>
+            </div>
+            <span class="bar half"></span>
+            <div class="circle active">
+              <span class="label">3</span>
+              <span class="title">Host 3</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">4</span>
+              <span class="title">Host 4</span>
+            </div>
+            <span class="bar"></span>
+            <div class="circle">
+              <span class="label">5</span>
+              <span class="title">Host 5</span>
+            </div>
+            <div class="apply">
+              <a class="btn btn-kytos-default">Aplly</a>
+            </div>
+          </div>
+
         </div>
 
       </div>
