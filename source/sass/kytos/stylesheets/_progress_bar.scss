@@ -1,73 +1,1859 @@
-.progress-hosts {
-width: 90%;
-margin: 10px auto;
-text-align: center;
+
+.gsi-number-circle li a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.gsi-number-circle li a:hover .number {
+    color: #000000;
+}
+.gsi-number-circle li > * .number {
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    font-size: 24px;
+    height: 36px;
+    padding: 5px;
+    text-align: center;
+    width: 36px;
+}
+.gsi-number-circle li > * .desc {
+    padding-left: 10px;
+}
+.gsi-number-circle li.visited > * .number, .gsi-number-circle li.current > * .number {
+    color: #000000;
+}
+.gsi-step-no-available li.current ~ li > *, .gsi-step-no-available li.current ~ li > *:hover {
+    background-color: #e5e5e5 !important;
+    border-color: #e5e5e5;
+    border-width: 0 !important;
+    color: #000000 !important;
+    cursor: not-allowed;
+}
+.gsi-step-no-available li.current ~ li > * .desc label, .gsi-step-no-available li.current ~ li > *:hover .desc label {
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available li.current ~ li > * .number::before, .gsi-step-no-available li.current ~ li > *:hover .number::before {
+    border-left-color: #e5e5e5 !important;
+}
+.gsi-step-no-available-all li:not(.current) > *, .gsi-step-no-available-all li:not(.current) > *:hover {
+    background-color: #e5e5e5 !important;
+    border-color: #e5e5e5 !important;
+    border-width: 0 !important;
+    color: #000000 !important;
+    cursor: not-allowed;
+}
+.gsi-step-no-available-all li:not(.current) > * .desc label, .gsi-step-no-available-all li:not(.current) > *:hover .desc label {
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available-all li:not(.current) > * .number::before, .gsi-step-no-available-all li:not(.current) > *:hover .number::before {
+    border-left-color: #e5e5e5 !important;
+}
+.gsi-step-no-available-after-current li.current ~ li > *, .gsi-step-no-available-after-current li.current ~ li > *:hover {
+    background-color: #e5e5e5 !important;
+    border-color: #e5e5e5;
+    border-width: 0 !important;
+    color: #000000 !important;
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available-after-current li.current ~ li > * .desc label, .gsi-step-no-available-after-current li.current ~ li > *:hover .desc label {
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available-after-current li.current ~ li > * .number::before, .gsi-step-no-available-after-current li.current ~ li > *:hover .number::before {
+    border-left-color: #e5e5e5 !important;
+}
+.gsi-step-no-available-before-current li:not(.current) > *, .gsi-step-no-available-before-current li:not(.current) > *:hover {
+    background-color: #e5e5e5 !important;
+    border-color: #e5e5e5 !important;
+    border-width: 0 !important;
+    color: #000000 !important;
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available-before-current li:not(.current) > * .desc label, .gsi-step-no-available-before-current li:not(.current) > *:hover .desc label {
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available-before-current li:not(.current) > * .number::before, .gsi-step-no-available-before-current li:not(.current) > *:hover .number::before {
+    border-left-color: #e5e5e5 !important;
+}
+.gsi-step-no-available-before-current li.current ~ li > *, .gsi-step-no-available-before-current li.current ~ li > *:hover {
+    background-color: #edeff0 !important;
+    border-color: #edeff0 !important;
+    border-width: 0 !important;
+    color: #000000 !important;
+    cursor: not-allowed !important;
+}
+.gsi-step-no-available-before-current li.current ~ li > * .desc label, .gsi-step-no-available-before-current li.current ~ li > *:hover .desc label {
+    cursor: pointer !important;
+}
+.gsi-step-no-available-before-current li.current ~ li > * .number::before, .gsi-step-no-available-before-current li.current ~ li > *:hover .number::before {
+    border-left-color: #e5e5e5 !important;
+}
+.gsi-transition li > * {
+    transition: background-color 0.6s ease 0s, border-color 0.6s ease 0s;
+}
+.gsi-transition li > * .number, .gsi-transition li > * .number::before {
+    transition: background-color 0.6s ease 0s, border-color 0.6s ease 0s;
+}
+.gsi-vertical {
+    margin: 0 0 10px 15px !important;
+    width: 85% !important;
+}
+.gsi-vertical li {
+    display: block !important;
+    margin-top: 10px;
+    min-width: 150px;
+}
+.gsi-vertical li > *, .gsi-vertical li.current > * {
+    border-radius: 4px;
+    padding: 1em 0.8em 0.8em 1em !important;
+}
+.gsi-step-indicator {
+    background-color: #edeff0;
+    border-radius: 0.25em;
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-step-indicator li {
+    display: inline-block;
+    float: left;
+    margin: 1.2em 0;
+}
+.gsi-step-indicator li .number {
+    font-size: 2em;
+}
+.gsi-step-indicator li .desc {
+    padding-left: 10px;
+    padding-top: 10px;
+    vertical-align: super;
+}
+.gsi-step-indicator li .desc label {
+    font-size: 1.1em;
+}
+.gsi-step-indicator li .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-step-indicator li::after {
+    color: #959fa5;
+    content: "»";
+    display: inline-block;
+    margin: 0 1em;
+}
+.gsi-step-indicator li:last-of-type::after {
+    display: none;
+}
+.gsi-step-indicator li > * {
+    color: #000000;
+    display: flex;
+    font-size: 1.4rem;
+}
+.gsi-step-indicator li.current > * {
+    color: #554077;
+}
+.gsi-step-indicator a:hover {
+    color: #554077;
+}
+.gsi-step-indicator a {
+    text-decoration: none !important;
+    font-size : 12px;
+}
+.gsi-step-indicator::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.gsi-step-indicator.triangle {
+    background-color: transparent;
+    padding: 0;
+}
+.gsi-step-indicator.triangle li {
+    margin: 4px 4px 4px 0;
+    padding: 0;
+    position: relative;
+}
+.gsi-step-indicator.triangle li:last-of-type {
+    margin-right: 0;
+}
+.gsi-step-indicator.triangle li > * {
+    background-color: #edeff0;
+    border-color: #edeff0;
+    color: #000000;
+    padding: 0 20px;
+    position: relative;
+}
+.gsi-step-indicator.triangle li.current > * {
+    background-color: #554077;
+    border-color: #554077;
+    color: #fff;
+}
+.gsi-step-indicator.triangle li:first-of-type > * {
+    border-radius: 0.25em 0 0 0.25em;
+}
+.gsi-step-indicator.triangle li:last-of-type > * {
+    border-radius: 0 0.25em 0.25em 0;
+    padding-right: 1.6em;
+}
+.gsi-step-indicator.triangle a:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #fff;
+}
+.gsi-step-indicator.triangle li::after, .gsi-step-indicator.triangle li > *::after {
+-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 17px 0 17px 17px;
+    content: "";
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0px;
+    width: 0;
+}
+.gsi-step-indicator.triangle li::after {
+    border-left-color: #444;
+    margin: 0;
+    transform: translateX(4px);
+    z-index: 1;
+}
+.gsi-step-indicator.triangle li > *::after {
+    border-left-color: inherit;
+    z-index: 2;
+}
+.gsi-step-indicator.triangle .triangle li:last-of-type::after, .gsi-step-indicator.triangle li:last-of-type > *::after {
+    display: none;
+}
+.gsi-step-indicator.triangle.gsi-arrow-left li::after, .gsi-step-indicator.triangle.gsi-arrow-left li > *::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 31px 20px 31px 0;
+    content: "";
+    height: 0;
+    left: -20px;
+    position: absolute;
+    top: 2px;
+    width: 0;
+}
+.gsi-step-indicator.triangle.gsi-arrow-left li > *::after {
+    border-right-color: inherit;
+    z-index: 2;
+}
+.gsi-step-indicator.gsi-vertical li {
+    display: block;
+    float: inherit !important;
+}
+.gsi-style-1 li .desc {
+    padding-top: 9px !important;
 }
 
-.progress-hosts .apply {
-display: inline-block;
-position: absolute;
-margin: 2px 10px;
+.gsi-style-2 li .desc {
+    padding-top: 0;
 }
-
-.progress-hosts .circle,
-.progress-hosts .bar {
-display: inline-block;
-background: #fff;
-width: 40px; height: 40px;
-border-radius: 40px;
-border: 1px solid #000;
--webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+.gsi-style-3 li .number {
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 24px;
+    height: 36px;
+    text-align: center;
+    width: 36px;
 }
-.progress-hosts .bar {
-position: relative;
-width: 35px;
-height: 6px;
-top: -33px;
-margin-left: -5px;
-margin-right: -5px;
-border-left: none;
-border-right: none;
-border-radius: 0;
+.gsi-style-3 li .desc {
+    padding-top: 0;
 }
-.progress-hosts .circle .label {
-display: inline-block;
-width: 32px;
-height: 32px;
-line-height: 32px;
-border-radius: 32px;
-margin-top: 3px;
-color: #b5b5ba;
-font-size: 17px;
+.gsi-style-3 li:hover .number, .gsi-style-3 li.current .number {
+    color: #000000;
 }
-.progress-hosts .circle .title {
-color: #b5b5ba;
-font-size: 13px;
-line-height: 30px;
-margin-left: -5px;
+.gsi-style-4 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
 }
-
-/* Done / Active */
-.progress-hosts .bar.done,
-.progress-hosts .circle.done {
-background: #111;
+.gsi-style-4 li {
+    display: inline-block;
 }
-
-.progress-hosts .circle.done .label {
-color: #FFF;
-background: #554077;
-box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+.gsi-style-4 li a {
+    background-color: #edeff0;
+    color: #000000;
 }
-.progress-hosts .circle.done .title {
-color: #444;
+.gsi-style-4 li a .number::before {
+    border-left-color: #edeff0;
 }
-.progress-hosts .circle.active .label {
-color: #FFF;
-background: #0c95be;
-box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+.gsi-style-4 li a:hover {
+    background-color: #000000;
+    color: #fff;
 }
-.progress-hosts .circle.active .title {
-color: #0c95be;
+.gsi-style-4 li a:hover .number::before {
+    border-left-color: #000000;
+}
+.gsi-style-4 li > * {
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 14px 14px 10px;
+}
+.gsi-style-4 li > * .number {
+    font-size: 24px;
+    padding-right: 5px;
+    position: relative;
+}
+.gsi-style-4 li > * .number::after, .gsi-style-4 li > * .number::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 34px 34px 34px 12px;
+    content: "";
+    margin: 0;
+    position: absolute;
+    top: -15px;
+    transform: translateX(3px);
+}
+.gsi-style-4 li > * .number::after {
+    border-left-color: #fff;
+    left: 100%;
+    z-index: 1;
+}
+.gsi-style-4 li > * .number::before {
+    left: 85%;
+    z-index: 2;
+}
+.gsi-style-4 li > * .desc {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.gsi-style-4 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-4 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-4 li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-4 li.current > * .number::before {
+    border-left-color: #554077;
+}
+.gsi-style-5 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-5 li {
+    display: inline-block;
+    margin: 5px 0 5px 5px;
+}
+.gsi-style-5 li a {
+    background-color: #edeff0;
+    color: #000000;
+}
+.gsi-style-5 li a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.gsi-style-5 li > * {
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 14px 14px 10px;
+}
+.gsi-style-5 li > * .number {
+    font-size: 19px;
+    padding-right: 5px;
+}
+.gsi-style-5 li > * .desc {
+    padding-left: 20px;
+}
+.gsi-style-5 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-5 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-5 li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-6 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-6 li {
+    display: inline-block;
+    margin-left: 5px;
+}
+.gsi-style-6 li a {
+    color: #000000;
+}
+.gsi-style-6 li a:hover .number {
+    background-color: #000000;
+    color: #fff;
+}
+.gsi-style-6 li > * {
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 14px 14px 10px;
+}
+.gsi-style-6 li > * .number {
+    background-color: #edeff0;
+    border-radius: 50%;
+    font-size: 20px;
+    height: 36px;
+    padding: 5px;
+    text-align: center;
+    width: 36px;
+}
+.gsi-style-6 li > * .desc {
+    padding-left: 20px;
+}
+.gsi-style-6 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-6 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-6 li.current > * .number {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-6.gsi-step-no-available li.current ~ li > * .number, .gsi-style-6.gsi-step-no-available li.current ~ li > *:hover .number {
+    background-color: #edeff0 !important;
+    color: #000000 !important;
+}
+.gsi-style-7 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-7 li {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    min-width: 215px;
+}
+.gsi-style-7 li a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.gsi-style-7 li > * {
+    background-color: #edeff0;
+    border-radius: 4px;
+    color: #000000;
+    display: flex;
+    padding: 16px 14px 14px 10px;
+}
+.gsi-style-7 li > * .number {
+    font-size: 20px;
+    padding-left: 5px;
+}
+.gsi-style-7 li > * .desc {
+    font-weight: normal;
+    padding-left: 15px;
+}
+.gsi-style-7 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-7 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-7 li.current:hover > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-7.border-left li a {
+    border-left: 10px solid #000000;
+}
+.gsi-style-7.border-left li.current > * {
+    border-left: 10px solid #554077;
+}
+.gsi-style-7.border-right li a {
+    border-right: 10px solid #000000;
+}
+.gsi-style-7.border-right li.current > * {
+    border-right: 10px solid #554077;
+}
+.gsi-style-7.border-top li a {
+    border-top: 10px solid #000000;
+}
+.gsi-style-7.border-top li.current > * {
+    border-top: 10px solid #554077;
+}
+.gsi-style-7.border-bottom li a {
+    border-bottom: 10px solid #000000;
+}
+.gsi-style-7.border-bottom li.current > * {
+    border-bottom: 10px solid #554077;
+}
+.gsi-style-8 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-8 li {
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+.gsi-style-8 li a {
+    background-color: #edeff0;
+    color: #000000;
+}
+.gsi-style-8 li a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.gsi-style-8 li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 5px;
+    left: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.gsi-style-8 li > * {
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 14px 14px 10px;
+}
+.gsi-style-8 li > * .number {
+    font-size: 19px;
+    padding-right: 5px;
+}
+.gsi-style-8 li > * .desc {
+    padding-left: 20px;
+}
+.gsi-style-8 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-8 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-8 li.visited > *, .gsi-style-8 li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-8 li.visited::after {
+    background-color: #554077 !important;
+}
+.gsi-style-8.gsi-vertical li {
+    margin-top: 20px;
+}
+.gsi-style-8.gsi-vertical li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 10%;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    width: 5px;
+}
+.gsi-style-9 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-9 li {
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+.gsi-style-9 li a {
+    color: #000000;
+}
+.gsi-style-9 li a:hover {
+    color: #554077;
+}
+.gsi-style-9 li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 5px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 150%;
+}
+.gsi-style-9 li > * {
+    display: flex;
+}
+.gsi-style-9 li > * .number {
+    display: none;
+}
+.gsi-style-9 li > * .desc {
+    margin-top: -23%;
+    padding-bottom: 33px;
+}
+.gsi-style-9 li > * .desc span {
+    display: none;
+}
+.gsi-style-9 li.visited > *, .gsi-style-9 li.current > * {
+    color: #554077;
+}
+.gsi-style-9 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-9 li > *::after {
+    background-color: #edeff0;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: 33%;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    width: 20px;
+}
+.gsi-style-9 li.visited > *::after, .gsi-style-9 li.current > *::after {
+    background-color: #554077;
+    z-index: 3;
+}
+.gsi-style-9.gsi-vertical li {
+    padding-left: 15px;
+}
+.gsi-style-9.gsi-vertical li:not(:last-child)::after {
+    height: 100%;
+    left: 8px;
+    top: 77%;
+    width: 5px;
+}
+.gsi-style-9.gsi-vertical li > * {
+    display: block;
+}
+.gsi-style-9.gsi-vertical li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-9.gsi-vertical li > *::after {
+    left: 0;
+    top: 36%;
+}
+.gsi-style-10 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-10 li {
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+.gsi-style-10 li a {
+    color: #000000;
+}
+.gsi-style-10 li a:hover {
+    color: #554077;
+}
+.gsi-style-10 li a:hover::before {
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    content: "";
+    height: 26px;
+    left: 29%;
+    margin: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 24%;
+    width: 26px;
+    z-index: 1;
+}
+.gsi-style-10 li:first-child a:hover::before, .gsi-style-10 li:last-child a:hover::before {
+    left: 28%;
+    top: 23%;
+}
+.gsi-style-10 li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 5px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 150%;
+}
+.gsi-style-10 li > * {
+    display: flex;
+}
+.gsi-style-10 li > * .number {
+    display: none;
+}
+.gsi-style-10 li > * .desc {
+    margin-top: -23%;
+    padding-bottom: 33px;
+}
+.gsi-style-10 li > * .desc span {
+    display: none;
+}
+.gsi-style-10 li.visited > *, .gsi-style-10 li.current > * {
+    color: #554077;
+}
+.gsi-style-10 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-10 li.visited a:hover::before {
+    background-color: #554077;
+}
+.gsi-style-10 li > *::after {
+    background-color: #edeff0;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: 33%;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    width: 20px;
+    z-index: 2;
+}
+.gsi-style-10 li.visited > *::after, .gsi-style-10 li.current > *::after {
+    background-color: #554077;
+}
+.gsi-style-10.gsi-vertical li {
+    padding-left: 15px;
+}
+.gsi-style-10.gsi-vertical li a:hover::before {
+    left: -3px;
+    top: 28%;
+}
+.gsi-style-10.gsi-vertical li:not(:last-child)::after {
+    height: 100%;
+    left: 8px;
+    top: 77%;
+    width: 5px;
+}
+.gsi-style-10.gsi-vertical li > * {
+    display: block;
+}
+.gsi-style-10.gsi-vertical li > *::after {
+    left: 0;
+    top: 36%;
+}
+.gsi-style-11 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-11 li {
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+.gsi-style-11 li a {
+    color: #000000;
+}
+.gsi-style-11 li a:hover {
+    color: #554077;
+}
+.gsi-style-11 li a:hover::before {
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    content: "";
+    height: 26px;
+    left: 27%;
+    margin: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 88%;
+    width: 26px;
+    z-index: 1;
+}
+.gsi-style-11 li:not(:first-child)::before, .gsi-style-11 li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 5px;
+    margin: 0;
+    position: absolute;
+    top: 141%;
+    width: 75%;
+}
+.gsi-style-11 li:not(:last-child)::after {
+    left: 50%;
+}
+.gsi-style-11 li:not(:first-child)::before {
+    right: 60%;
+}
+.gsi-style-11 li > * {
+    display: block;
+}
+.gsi-style-11 li > * .number {
+    display: none;
+}
+.gsi-style-11 li > * .desc span {
+    display: none;
+}
+.gsi-style-11 li.visited > *, .gsi-style-11 li.current > * {
+    color: #554077;
+}
+.gsi-style-11 li.current::before, .gsi-style-11 li.current::after, .gsi-style-11 li.visited::before, .gsi-style-11 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-11 li.visited a:hover::before {
+    background-color: #554077;
+}
+.gsi-style-11 li > *::after {
+    background-color: #edeff0;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: 33%;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    width: 20px;
+    z-index: 2;
+}
+.gsi-style-11 li.visited > *::after, .gsi-style-11 li.current > *::after {
+    background-color: #554077;
+}
+.gsi-style-11.gsi-vertical li {
+    padding-left: 15px;
+}
+.gsi-style-11.gsi-vertical li a:hover::before {
+    left: -3px;
+    top: 28%;
+}
+.gsi-style-11.gsi-vertical li:not(:last-child)::after {
+    height: 100%;
+    left: 8px;
+    top: 77%;
+    width: 5px;
+}
+.gsi-style-11.gsi-vertical li:not(:first-child)::before {
+    height: 75%;
+    left: 8px;
+    right: 0;
+    top: 0;
+    width: 5px;
+}
+.gsi-style-11.gsi-vertical li > * {
+    display: block;
+}
+.gsi-style-11.gsi-vertical li > *::after {
+    left: 0;
+    top: 36%;
+}
+.gsi-style-12 {
+    counter-reset: step;
+    margin: 1em auto;
+    padding: 0 1.2em 2em;
+    width: 100%;
+}
+.gsi-style-12 li {
+    counter-increment: step;
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+.gsi-style-12 li a {
+    color: #000000;
+}
+.gsi-style-12 li a:hover {
+    color: #554077;
+}
+.gsi-style-12 li a:hover::before {
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    content: "";
+    height: 26px;
+    left: 28%;
+    margin: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 108%;
+    width: 26px;
+    z-index: 1;
+}
+.gsi-style-12 li:not(:first-child)::before, .gsi-style-12 li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 5px;
+    margin: 0;
+    position: absolute;
+    top: 165%;
+    width: 75%;
+}
+.gsi-style-12 li:not(:last-child)::after {
+    left: 50%;
+}
+.gsi-style-12 li:not(:first-child)::before {
+    right: 60%;
+}
+.gsi-style-12 li > * {
+    display: block;
+}
+.gsi-style-12 li > * .number {
+    display: none;
+}
+.gsi-style-12 li > * .desc span {
+    display: none;
+}
+.gsi-style-12 li.visited > *, .gsi-style-12 li.current > * {
+    color: #554077;
+}
+.gsi-style-12 li.current::before, .gsi-style-12 li.current::after, .gsi-style-12 li.visited::before, .gsi-style-12 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-12 li.visited a:hover::before {
+    background-color: #554077;
+}
+.gsi-style-12 li > *::after {
+    background-color: #edeff0;
+    border-radius: 50%;
+    color: #000000;
+    content: counter(step, decimal);
+    height: 20px;
+    left: 33%;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 125%;
+    width: 20px;
+    z-index: 2;
+}
+.gsi-style-12 li.visited > *::after, .gsi-style-12 li.current > *::after {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-12.gsi-vertical li {
+    padding-left: 15px;
+}
+.gsi-style-12.gsi-vertical li a:hover::before {
+    left: -3px;
+    top: 28%;
+}
+.gsi-style-12.gsi-vertical li:not(:last-child)::after {
+    height: 100%;
+    left: 8px;
+    top: 77%;
+    width: 5px;
+}
+.gsi-style-12.gsi-vertical li:not(:first-child)::before {
+    height: 75%;
+    left: 8px;
+    right: 0;
+    top: 0;
+    width: 5px;
+}
+.gsi-style-12.gsi-vertical li > * {
+    display: block;
+}
+.gsi-style-12.gsi-vertical li > *::after {
+    left: 0;
+    top: 36%;
+}
+.gsi-style-13 {
+    margin: 1em auto;
+    padding: 0 1.2em;
+    width: 100%;
+}
+.gsi-style-13 li {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    position: relative;
+}
+.gsi-style-13 li a {
+    background-color: #edeff0;
+    color: #000000;
+    position: relative;
+}
+.gsi-style-13 li a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.gsi-style-13 li:not(:last-child)::after {
+    background: #edeff0 none repeat scroll 0 0;
+    content: "";
+    height: 5px;
+    left: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.gsi-style-13 li > * {
+    border-radius: 4px;
+    display: flex;
+    padding: 10px 25px 25px;
+}
+.gsi-style-13 li > * .number {
+    background-color: #fff;
+    border: 2px solid #edeff0;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 28px;
+    height: 42px;
+    left: 29%;
+    padding-top: 8px;
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    width: 50px;
+}
+.gsi-style-13 li > * .desc {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.gsi-style-13 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-13 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-13 li.visited > *, .gsi-style-13 li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-13 li.visited > * .number, .gsi-style-13 li.current > * .number {
+    background-color: #fff;
+    border: 2px solid #554077;
+    color: #554077;
+}
+.gsi-style-13 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-13.gsi-vertical li {
+    margin-bottom: 50px;
+}
+.gsi-style-13.gsi-vertical li:not(:last-child)::after {
+    height: 100%;
+    left: 48%;
+    top: 100%;
+    width: 5px;
+}
+.gsi-style-13.gsi-vertical li > * {
+    text-align: center;
+}
+.gsi-style-13.gsi-vertical li > * .number {
+    background-color: #fff;
+    border: 2px solid #edeff0;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 28px;
+    height: 42px;
+    left: 38%;
+    padding-top: 8px;
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    width: 50px;
+    z-index: 1;
+}
+.gsi-style-13.gsi-vertical li > * .desc {
+    font-size: 22px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.gsi-style-13.gsi-vertical li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-13.gsi-vertical li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-13.gsi-vertical li.visited > *, .gsi-style-13.gsi-vertical li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-13.gsi-vertical li.visited > * .number, .gsi-style-13.gsi-vertical li.current > * .number {
+    background-color: #fff;
+    border: 2px solid #554077;
+    color: #554077;
+}
+.gsi-style-13.gsi-vertical li.visited::after {
+    background-color: #554077;
+}
+@media only screen and (min-width: 317px) and (max-width: 480px) {
+.gsi-step-indicator {
+    padding: 0;
+    width: 100%;
+}
+.gsi-step-indicator li {
+    display: block;
+    float: inherit !important;
+}
+.gsi-step-indicator li .number {
+    display: none;
+    font-size: 24px;
+}
+.gsi-step-indicator li .desc {
+    padding-left: 4px;
+    padding-top: 0;
+    vertical-align: super;
+}
+.gsi-step-indicator li .desc label {
+    font-size: 1.1em;
+}
+.gsi-step-indicator li .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-step-indicator li::after {
+    color: #959fa5;
+    content: "»";
+    display: inline-block;
+    margin: 0 1em;
+}
+.gsi-step-indicator li:last-of-type::after {
+    display: none;
+}
+.gsi-step-indicator li > * {
+    color: #000000;
+    display: flex;
+    font-size: 16px;
+}
+.gsi-step-indicator.triangle {
+    background-color: transparent;
+    padding: 0;
+}
+.gsi-step-indicator.triangle li {
+    margin: 4px 4px 4px 0;
+}
+.gsi-step-indicator.triangle li > * {
+    padding: 6px 6px 6px 13px;
+}
+.gsi-step-indicator.triangle li:first-of-type > * {
+    border-radius: 0.25em 0 0 0.25em;
+}
+.gsi-step-indicator.triangle li:last-of-type > * {
+    border-radius: 0 0.25em 0.25em 0;
+    padding-right: 1.6em;
+}
+.gsi-step-indicator.triangle li::after, .gsi-step-indicator.triangle li > *::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 16px 0 16px 12px;
+    content: "";
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.gsi-step-indicator.triangle li::after {
+    border-left-color: #fff;
+    margin: 0;
+    transform: translateX(4px);
+    z-index: 1;
+}
+.gsi-step-indicator.triangle li > *::after {
+    border-left-color: inherit;
+    z-index: 2;
+}
+.gsi-step-indicator.triangle .triangle li:last-of-type::after, .gsi-step-indicator.triangle li:last-of-type > *::after {
+    display: none;
+}
+.gsi-vertical {
+    width: 100% !important;
+}
+.gsi-vertical li {
+    margin-right: 10px;
+}
+.gsi-vertical li > *, .gsi-vertical li.current > * {
+    padding: 8px 7px 7px 5px !important;
+}
+.gsi-number-circle li {
+    display: block;
+    margin: 5px 0;
+}
+.gsi-number-circle li > * .number {
+    font-size: 16px;
+    height: 18px;
+    padding: 2px 4px 4px;
+    width: 18px;
+}
+.gsi-number-circle li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-2.triangle li .desc {
+    padding-top: 0;
+}
+.gsi-style-2.triangle li::after, .gsi-style-2.triangle li > *::after {
+    border-width: 24px 0 24px 13px !important;
+}
+.gsi-style-4 {
+    display: inline-block;
+    margin: 1em auto;
+    padding: 0;
+}
+.gsi-style-4 li {
+    display: block;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.gsi-style-4 li > * {
+    display: flex;
+    padding: 8px 7px 7px;
+}
+.gsi-style-4 li > * .number {
+    font-size: 18px;
+    padding-right: 5px;
+}
+.gsi-style-4 li > * .number::after, .gsi-style-4 li > * .number::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 19px 19px 19px 9px;
+    top: -8px;
+}
+.gsi-style-4 li > * .number::after {
+    border-left-color: #fff;
+    left: 65%;
+    z-index: 1;
+}
+.gsi-style-4 li > * .number::before {
+    left: 54%;
+    z-index: 2;
+}
+.gsi-style-4 li > * .desc {
+    padding-left: 10px;
+    padding-top: 0;
+}
+.gsi-style-4 li > * .desc label {
+    font-size: 14px;
+}
+.gsi-style-4 li > * .desc span {
+    font-size: 12px;
+}
+.gsi-style-4 li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-4 li.current > * .number::before {
+    border-left-color: #554077;
+}
+.gsi-style-5 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-5 li {
+    display: block;
+    margin: 5px 0;
+}
+.gsi-style-5 li > * {
+    padding: 8px 7px 7px 5px;
+}
+.gsi-style-5 li > * .number {
+    font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.gsi-style-5 li > * .desc {
+    padding-left: 5px;
+}
+.gsi-style-5 li > * .desc label {
+    font-size: 16px;
+}
+.gsi-style-5 li > * .desc span {
+    display: block;
+    font-size: 12px;
+}
+.gsi-style-6 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-6 li {
+    display: block;
+}
+.gsi-style-6 li > * {
+    padding: 8px 7px 7px 5px;
+}
+.gsi-style-6 li > * .number {
+    font-size: 20px;
+    height: 26px;
+    padding: 3px;
+    width: 26px;
+}
+.gsi-style-6 li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-6 li > * .desc label {
+    font-size: 16px;
+}
+.gsi-style-6 li > * .desc span {
+    font-size: 12px;
+}
+.gsi-style-7 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-7 li {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    min-width: 215px;
+}
+.gsi-style-8 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-8 li {
+    display: block;
+    margin: 10px 0;
+}
+.gsi-style-8 li:not(:last-child)::after {
+    height: 100%;
+    left: 10%;
+    top: 100%;
+    width: 5px;
+}
+.gsi-style-8 li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-8 li > * .desc label {
+    font-size: 16px;
+}
+.gsi-style-8 li > * .desc span {
+    font-size: 12px;
+}
+.gsi-style-9 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-9 li, .gsi-style-9 li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-9 li > * .desc {
+    font-size: 14px;
+}
+.gsi-style-9 li:not(:last-child)::after {
+    left: 70%;
+    width: 100%;
+}
+.gsi-style-10 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-10 li {
+    margin-left: 0;
+}
+.gsi-style-10 li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-10 li:not(:last-child)::after {
+    width: 100%;
+}
+.gsi-style-10.gsi-vertical li {
+    margin-left: 0;
+}
+.gsi-style-10.gsi-vertical li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-11 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-11 li {
+    margin-left: 0;
+}
+.gsi-style-11 li:not(:first-child) {
+    margin-left: 5px;
+}
+.gsi-style-11 li > * .desc {
+    font-size: 14px;
+}
+.gsi-style-11 li:not(:first-child)::before, .gsi-style-11 li:not(:last-child)::after {
+    width: 50%;
+}
+.gsi-style-11.gsi-vertical li {
+    margin-left: 0;
+}
+.gsi-style-11.gsi-vertical li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-11.gsi-vertical li > * .desc {
+    display: inline-block;
+    padding-left: 5px;
+    padding-top: 6px;
+}
+.gsi-style-12 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-12 li {
+    margin-left: 0;
+}
+.gsi-style-12 li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-12 li:not(:first-child)::before, .gsi-style-12 li:not(:last-child)::after {
+    width: 44%;
+}
+.gsi-style-12 li.current::before, .gsi-style-12 li.current::after, .gsi-style-12 li.visited::before, .gsi-style-12 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-12.gsi-vertical li {
+    margin-left: 0;
+}
+.gsi-style-12.gsi-vertical li > * .desc {
+    display: inline-block;
+    padding: 5px;
+}
+.gsi-style-13 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-13 li {
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.gsi-style-13 li:not(:first-child) {
+    margin-left: 5px;
+}
+.gsi-style-13 li:not(:last-child)::after {
+    display: none;
+}
+.gsi-style-13 li > * {
+    padding: 6px 7px 0;
+}
+.gsi-style-13 li > * .number {
+    display: none;
+}
+.gsi-style-13 li > * .desc {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.gsi-style-13 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-13 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-13.gsi-vertical li {
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.gsi-style-13.gsi-vertical li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-13.gsi-vertical li:not(:last-child)::after {
+    display: block;
+}
+.gsi-style-13.gsi-vertical li > * {
+    text-align: center;
+}
+.gsi-style-13.gsi-vertical li > * .number {
+    left: 44%;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+.gsi-step-indicator {
+    padding: 0;
+    width: 100%;
+}
+.gsi-step-indicator li .number {
+    font-size: 24px;
+}
+.gsi-step-indicator li .desc {
+    padding-top: 6px;
+    vertical-align: super;
+}
+.gsi-step-indicator li .desc label {
+    font-size: 1.1em;
+}
+.gsi-step-indicator li .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-step-indicator li::after {
+    color: #959fa5;
+    content: "»";
+    display: none;
+    margin: 0 1em;
+}
+.gsi-step-indicator li:last-of-type::after {
+    display: none;
+}
+.gsi-step-indicator li > * {
+    color: #000000;
+    display: flex;
+    font-size: 1.6rem;
+}
+.gsi-step-indicator.triangle {
+    background-color: transparent;
+    padding: 0;
+}
+.gsi-step-indicator.triangle li {
+    display: block;
+    float: none;
+    margin: 4px 4px 4px 0;
+}
+.gsi-step-indicator.triangle li > * {
+    padding: 6px 6px 6px 14px;
+}
+.gsi-step-indicator.triangle li:first-of-type > * {
+    border-radius: 0.25em 0 0 0.25em;
+}
+.gsi-step-indicator.triangle li:last-of-type > * {
+    border-radius: 0 0.25em 0.25em 0;
+    padding-right: 1.6em;
+}
+.gsi-step-indicator.triangle li::after, .gsi-step-indicator.triangle li > *::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 21px 0 21px 13px;
+    content: "";
+    display: none !important;
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.gsi-step-indicator.triangle li::after {
+    border-left-color: #fff;
+    margin: 0;
+    transform: translateX(4px);
+    z-index: 1;
+}
+.gsi-step-indicator.triangle li > *::after {
+    border-left-color: inherit;
+    z-index: 2;
+}
+.gsi-step-indicator.triangle .triangle li:last-of-type::after, .gsi-step-indicator.triangle li:last-of-type > *::after {
+    display: none;
+}
+.gsi-vertical {
+    width: 100% !important;
+}
+.gsi-vertical li {
+    margin-right: 10px;
+}
+.gsi-vertical li > *, .gsi-vertical li.current > * {
+    padding: 8px 14px 8px 15px !important;
+}
+.gsi-number-circle li > * .number {
+    font-size: 16px;
+    height: 18px;
+    padding: 2px 4px 4px;
+    width: 18px;
+}
+.gsi-number-circle li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-3.triangle li::after, .gsi-style-3.triangle li > *::after {
+    border-width: 28px 0 28px 13px !important;
+}
+.gsi-style-2.triangle li .desc {
+    padding-top: 0;
+}
+.gsi-style-2.triangle li::after, .gsi-style-2.triangle li > *::after {
+    border-width: 24px 0 24px 13px !important;
+}
+.gsi-style-4 {
+    display: inline-block;
+    margin: 1em auto;
+    padding: 0;
+}
+.gsi-style-4 li > * {
+    display: flex;
+    padding: 8px 7px 7px;
+}
+.gsi-style-4 li > * .number {
+    font-size: 18px;
+    padding-right: 5px;
+}
+.gsi-style-4 li > * .number::after, .gsi-style-4 li > * .number::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 19px 19px 19px 9px;
+    top: -8px;
+}
+.gsi-style-4 li > * .number::after {
+    border-left-color: #fff;
+    left: 65%;
+    z-index: 1;
+}
+.gsi-style-4 li > * .number::before {
+    left: 54%;
+    z-index: 2;
+}
+.gsi-style-4 li > * .desc {
+    padding-left: 10px;
+    padding-top: 0;
+}
+.gsi-style-4 li > * .desc label {
+    font-size: 14px;
+}
+.gsi-style-4 li > * .desc span {
+    font-size: 12px;
+}
+.gsi-style-4 li.current > * {
+    background-color: #554077;
+    color: #fff;
+}
+.gsi-style-4 li.current > * .number::before {
+    border-left-color: #554077;
+}
+.gsi-style-5 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-5 li {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.gsi-style-5 li > * {
+    padding: 8px 7px 7px 5px;
+}
+.gsi-style-5 li > * .number {
+    font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.gsi-style-5 li > * .desc {
+    padding-left: 5px;
+}
+.gsi-style-5 li > * .desc label {
+    font-size: 16px;
+}
+.gsi-style-5 li > * .desc span {
+    display: block;
+    font-size: 12px;
+}
+.gsi-style-6 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-6 li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.gsi-style-6 li > * {
+    padding: 8px 7px 7px 5px;
+}
+.gsi-style-6 li > * .number {
+    font-size: 20px;
+    height: 26px;
+    padding: 3px;
+    width: 26px;
+}
+.gsi-style-6 li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-6 li > * .desc label {
+    font-size: 16px;
+}
+.gsi-style-6 li > * .desc span {
+    font-size: 12px;
+}
+.gsi-style-7 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-7 li {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    min-width: 215px;
+}
+.gsi-style-8 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-8 li {
+    display: block;
+    margin: 10px 0;
+}
+.gsi-style-8 li:not(:last-child)::after {
+    height: 100%;
+    left: 10%;
+    top: 100%;
+    width: 5px;
+}
+.gsi-style-8 li > * .desc {
+    padding-left: 10px;
+}
+.gsi-style-8 li > * .desc label {
+    font-size: 16px;
+}
+.gsi-style-8 li > * .desc span {
+    font-size: 12px;
+}
+.gsi-style-9 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-9 li {
+    margin-left: 0;
+}
+.gsi-style-9 li:not(:first-child) {
+    margin-left: 30px;
+}
+.gsi-style-9.gsi-vertical li {
+    margin-left: 0;
+    padding-left: 15px;
+}
+.gsi-style-9.gsi-vertical li:not(:last-child)::after {
+    height: 100%;
+    left: 8px;
+    top: 94%;
+    width: 5px;
+}
+.gsi-style-9.gsi-vertical li > * {
+    display: block;
+}
+.gsi-style-9.gsi-vertical li > *::after {
+    left: 0;
+    top: 36%;
+}
+.gsi-style-10 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-10 li {
+    margin-left: 0;
+}
+.gsi-style-10 li:not(:first-child) {
+    margin-left: 20px;
+}
+.gsi-style-10 li:not(:last-child)::after {
+    width: 120%;
+}
+.gsi-style-10.gsi-vertical li {
+    margin-left: 0;
+}
+.gsi-style-11 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-11 li {
+    margin-left: 0;
+}
+.gsi-style-11 li:not(:first-child) {
+    margin-left: 20px;
+}
+.gsi-style-11 li:not(:first-child)::before, .gsi-style-11 li:not(:last-child)::after {
+    top: 141%;
+    width: 61%;
+}
+.gsi-style-11 li:not(:last-child)::after {
+    left: 61%;
+}
+.gsi-style-11 li:not(:first-child)::before {
+    right: 61%;
+}
+.gsi-style-11.gsi-vertical li {
+    margin-left: 0;
+}
+.gsi-style-11.gsi-vertical li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-11.gsi-vertical li > * .desc {
+    display: inline-block;
+    padding-left: 5px;
+    padding-top: 6px;
+}
+.gsi-style-12 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-12 li {
+    margin-left: 0;
+}
+.gsi-style-12 li:not(:first-child) {
+    margin-left: 20px;
+}
+.gsi-style-12 li:not(:first-child)::before, .gsi-style-12 li:not(:last-child)::after {
+    width: 61%;
+}
+.gsi-style-12 li.current::before, .gsi-style-12 li.current::after, .gsi-style-12 li.visited::before, .gsi-style-12 li.visited::after {
+    background-color: #554077;
+}
+.gsi-style-12.gsi-vertical li {
+    margin-left: 0;
+}
+.gsi-style-12.gsi-vertical li > * .desc {
+    display: inline-block;
+    padding: 5px;
+}
+.gsi-style-13 {
+    padding: 0;
+    width: 100%;
+}
+.gsi-style-13 li {
+    margin-left: 0;
+}
+.gsi-style-13 li:not(:first-child) {
+    margin-left: 20px;
+}
+.gsi-style-13 li:not(:last-child)::after {
+    width: 28%;
+}
+.gsi-style-13 li > * {
+    padding: 6px 7px 10px;
+}
+.gsi-style-13 li > * .number {
+    font-size: 19px;
+    height: 29px;
+    left: 26%;
+    padding-top: 7px;
+    width: 35px;
+}
+.gsi-style-13 li > * .desc {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.gsi-style-13 li > * .desc label {
+    font-size: 1.1em;
+}
+.gsi-style-13 li > * .desc span {
+    display: block;
+    font-size: 14px;
+}
+.gsi-style-13.gsi-vertical li {
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+.gsi-style-13.gsi-vertical li:not(:first-child) {
+    margin-left: 0;
+}
+.gsi-style-13.gsi-vertical li > * {
+    text-align: center;
+}
+.gsi-style-13.gsi-vertical li > * .number {
+    left: 44%;
+}
 }
