@@ -467,8 +467,7 @@
     <script id="context-host-template" type="x-tmpl-mustache">
       <div class="row-fluid">
         <div class="col-settings host-select col-md-5">
-          <div class="col-xs-6">
-            <div class="col-xs-12 host-origin">
+          <div class="col-xs-6 host-origin">
               <h1>Origin</h1>
               <dl>
                 <dt>Host</dt>
@@ -479,9 +478,8 @@
                 <dd>192.168.0.1</dd>
               </dl>
 
-            </div>
           </div>
-          <div class="col-xs-6 host-destination">
+          <div class="col-settings col-xs-6 host-destination">
           <h1>Destination</h1>
             <p>Please, select a second host</p>
           </div>
@@ -528,6 +526,7 @@
           }
           var template = $('#context-switch-template').html();
           $('#tab_context_button a').click();
+          $('#context_target').removeClass('hosts');
           Mustache.parse(template);   // optional, speeds up future uses
           var rendered = Mustache.render(template, data);
           $('#context_target').html(rendered).attr("data-data", JSON.stringify(data, null, 2) );
@@ -538,7 +537,7 @@
           var template = $('#context-host-template').html();
           Mustache.parse(template);   // optional, speeds up future uses
           var rendered = Mustache.render(template);
-          $('#context_target').html(rendered); //.attr("data-data", JSON.stringify(data, null, 2) );
+          $('#context_target').addClass('hosts').html(rendered); //.attr("data-data", JSON.stringify(data, null, 2) );
       }
 
 
