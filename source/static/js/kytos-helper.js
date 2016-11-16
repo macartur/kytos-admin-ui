@@ -13,6 +13,15 @@ KYTOS_HELPER.loadTemplate = function(target, data, path_template){
 
 }
 
+
+function fix_name(name) {
+  return name.toString().replace(/:/g, '__');
+}
+
+function unfix_name(name) {
+  return name.toString().replace(/\_\_/g, ':');
+}
+
 function scrollBehavior(){
   // custom scroolbar
   $(".customScroll").mCustomScrollbar({

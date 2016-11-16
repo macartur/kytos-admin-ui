@@ -261,14 +261,6 @@ function show_context(d) {
   }
 }
 
-function fix_name(name) {
-  return name.toString().replace(/:/g, '__');
-}
-
-function unfix_name(name) {
-  return name.toString().replace(/\_\_/g, ':');
-}
-
 function get_current_layout() {
   /*
     {
