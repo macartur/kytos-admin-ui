@@ -11,7 +11,7 @@
     overflow-y: auto;
     /* Scrollable contents if viewport is shorter than content. */
     background-color: #24262d;
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
         width: 100px;
     }
 }
@@ -104,7 +104,7 @@
     padding-left: 40px;
     border-left: none;
     color: #848c94;
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
       padding-left: 0;
     }
 }
@@ -145,7 +145,7 @@
 }
 
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-md-max) {
   .nav.sidebar li a {
       width: 100%;
       display: block;

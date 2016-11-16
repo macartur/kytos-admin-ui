@@ -13,7 +13,7 @@
     letter-spacing: 10px;
     color: #FFFFFF;
     width: 200px;
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
         width: 100px;
     }
 }

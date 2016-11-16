@@ -57,15 +57,14 @@
       </div>
     </div>
   </div>
-
 <!-- END OF MODALS -->
 <!-- NAVBAR -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="index.html">
-          <img src="static/images/logo.png" class="hidden-xs hidden-sm visible-lg visible-md" height="45" alt="Kytos"/>
-          <img src="static/images/logo-circle-white.png" class="hidden-lg hidden-md visible-sm visible-xs" height="45" alt="Kytos"/>
+          <img src="static/images/logo.png" class="hidden-xs hidden-sm hidden-md" height="45" alt="Kytos"/>
+          <img src="static/images/logo-circle-white.png" class="hidden-lg" height="45" alt="Kytos"/>
         </a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
@@ -94,36 +93,37 @@
           <ul class="nav sidebar">
             <li class="active nav-topology-btn">
               <a href="index.html">
-                <i class="fa fa-dashboard fa-2x hidden-lg hidden-md"></i>
-                <i class="fa fa-dashboard hidden-xs hidden-sm"></i>
+                <i class="fa fa-dashboard hidden-xs hidden-sm hidden-md"></i>
+                <i class="fa fa-dashboard fa-2x hidden-lg"></i>
                 Topology
               </a>
             </li>
             <li class="nav-hosts-btn">
               <a href="#monitoring">
-                <i class="fa fa-bar-chart fa-2x hidden-lg hidden-md"></i>
-                <i class="fa fa-bar-chart hidden-xs hidden-sm"></i>
+                <i class="fa fa-bar-chart hidden-xs hidden-sm hidden-md"></i>
+                <i class="fa fa-bar-chart fa-2x hidden-lg"></i>
                 Hosts
               </a>
             </li>
             <li class="nav-terminal-btn">
               <a href="#monitoring" class="open-terminal" data-toggle="collapse" aria-expanded="false">
-                <i class="fa fa-terminal fa-2x hidden-lg hidden-md"></i>
-                <i class="fa fa-terminal hidden-xs hidden-sm"></i>
+                <i class="fa fa-terminal hidden-xs hidden-sm hidden-md"></i>
+                <i class="fa fa-terminal fa-2x hidden-lg"></i>
                 Terminal
               </a>
             </li>
             <li class="nav-middle-spacer">&nbsp;</li>
             <li class="nav-kytos-api-status">
               <i class="fa fa-power-off api-status" aria-hidden="true"></i>
-              <span class='hidden-sm hidden-xs'>Kytos </span>API
+              <span class='hidden-xs hidden-sm hidden-md'>Kytos </span>API
             </li>
             <li class='nav-kytos-websocket-status'>
               <i class="fa fa-power-off websocket-status" aria-hidden="true"></i>
-              <span class='hidden-sm hidden-xs'>Kytos Websocket</span>
-              <span class='show-sm show-xs'>WS</span>
+              <span class='hidden-xs hidden-sm hidden-md'>Kytos Websocket</span>
+              <span class='hidden-lg'>WS</span>
+
             </li>
-            <li class="nav-info hidden-sm hidden-xs">
+            <li class="nav-info hidden-md hidden-sm hidden-xs">
               <i class="pe pe-7s-shield text-accent"></i>
               <div class="m-t-xs">
                 <span class="c-white">Kytos</span> is a <strong>beta software</strong>.

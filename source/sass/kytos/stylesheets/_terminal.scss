@@ -12,7 +12,7 @@
     height: 280px;
     color: #adadad;
     z-index: 100;
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
         margin-left: 100px;
         width: calc(100% - 102px);
     }
