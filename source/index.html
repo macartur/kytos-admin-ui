@@ -50,7 +50,7 @@
           <button type="button" class="btn btn-kytos-default" data-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-kytos-primary" onclick='save_layout();'>
+          <button type="button" class="btn btn-kytos-primary" onclick='topology.layouts.save();'>
             Save changes
           </button>
         </div>
@@ -187,13 +187,13 @@
                   <p class="help">Select the elements to be displayed</p>
             <div class="checkbox" data-label-width="0"  data-size="mini">
               <label for="show_topology">
-                <input id='show_topology' type="checkbox" data-label-width="0" data-size="mini" checked="checked" onchange='$("#topology-chart").toggle()'> Topology
+                <input id='show_topology' type="checkbox" data-label-width="0" data-size="mini" checked="checked" onchange='topology.toggle()'> Topology
               </label>
               <label for="show_unused_interfaces">
-                <input id='show_unused_interfaces' type="checkbox" data-label-width="0" data-size="mini" checked="checked" data-on-color="primary" onchange="toggle_unused_interfaces();"> Unused interfaces
+                <input id='show_unused_interfaces' type="checkbox" data-label-width="0" data-size="mini" checked="checked" data-on-color="primary" onchange="topology.interfaces.unused.toggle();"> Unused interfaces
               </label>
               <label for="show_disconnected_hosts">
-                <input id='show_disconnected_hosts' type="checkbox" data-label-width="0" data-size="mini" checked="checked" onchange="toggle_disconnected_hosts();"> Disconnected hosts
+                <input id='show_disconnected_hosts' type="checkbox" data-label-width="0" data-size="mini" checked="checked" onchange="topology.hosts.disconnected.toggle();"> Disconnected hosts
               </label>
             </div>
                 </div>
@@ -224,10 +224,10 @@
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><a href="#" data-value="Name" onclick="toggle_labels('switch', 'name');">Name</a></li>
-                    <li><a href="#" data-value="DPID" onclick="toggle_labels('switch', 'dpid');">DPID</a></li>
-                    <li><a href="#" data-value="Address" onclick="toggle_labels('switch', 'address');">Address</a></li>
-                    <li><a href="#" data-value="None" onclick="toggle_labels('switch', 'none');">None</a></li>
+                    <li><a href="#" data-value="Name" onclick="topology.labels.toggle('switch', 'name');">Name</a></li>
+                    <li><a href="#" data-value="DPID" onclick="topology.labels.toggle('switch', 'dpid');">DPID</a></li>
+                    <li><a href="#" data-value="Address" onclick="topology.labels.toggle('switch', 'address');">Address</a></li>
+                    <li><a href="#" data-value="None" onclick="topology.labels.toggle('switch', 'none');">None</a></li>
                   </ul>
                 </label>
                   <label for='host_label_dropdown'>
@@ -237,10 +237,10 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <li><a href="#" data-value="Name" onclick="toggle_labels('host', 'name');">Name</a></li>
-                      <li><a href="#" data-value="Mac" onclick="toggle_labels('host', 'mac');">MAC</a></li>
-                      <li><a href="#" data-value="Address" onclick="toggle_labels('host', 'address');">Address</a></li>
-                      <li><a href="#" data-value="None" onclick="toggle_labels('host', 'none');">None</a></li>
+                      <li><a href="#" data-value="Name" onclick="topology.labels.toggle('host', 'name');">Name</a></li>
+                      <li><a href="#" data-value="Mac" onclick="topology.labels.toggle('host', 'mac');">MAC</a></li>
+                      <li><a href="#" data-value="Address" onclick="topology.labels.toggle('host', 'address');">Address</a></li>
+                      <li><a href="#" data-value="None" onclick="topology.labels.toggle('host', 'none');">None</a></li>
                     </ul>
                   </label>
               </div>

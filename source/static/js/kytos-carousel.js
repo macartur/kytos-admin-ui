@@ -42,7 +42,7 @@ function rebuild_switches_carousel() {
 
 function populate_switches_carousel() {
   var container = $('.owl-carousel'),
-      switches = get_switches();
+      switches = topology.switches.all;
 
   $.get(mustache_dir + 'switch_card.template', function(template, textStatus, jqXhr) {
     template = $(template).filter('#switch-list-cards').html();

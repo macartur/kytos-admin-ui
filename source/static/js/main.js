@@ -66,10 +66,10 @@ $(window).ready(function(){
 
   if (default_settings.show_topology) {
     $('#show_topology').prop('checked', true).change();
-    $('#topology-chart').show();
+    topology.show();
   } else {
     $('#show_topology').prop('checked', false).change();
-    $('#topology-chart').hide();
+    topology.hide();
   }
 
   if (default_settings.show_map) {
@@ -92,7 +92,7 @@ $(window).ready(function(){
       $('#background-map').css('opacity', current.value.newValue);
     });
 
-  load_layouts();
-  draw_background_map(draw_topology);
+  topology.layouts.load();
+  draw_background_map(topology.draw);
 
 })
