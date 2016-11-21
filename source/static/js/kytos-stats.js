@@ -11,7 +11,9 @@ function plot_context_radar(ifaces) {
     }
   }
   radar_data = [rx, tx];
-  RadarChart("context-switchChart", radar_data);
+  radar = RadarChart();
+  radar.init("context-switchChart", radar_data);
+  window.contextRadar = radar;
 }
 
 function add_switch_interfaces(data, callback1, callback2) {

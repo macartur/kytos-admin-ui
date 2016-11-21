@@ -1,3 +1,4 @@
+window.switches_cards = [];
 function build_switches_carousel(settings){
   $('.owl-carousel').owlCarousel(settings);
 }
@@ -14,7 +15,9 @@ function plot_carousel_card_radar(data) {
              'speed': iface.speed});
   }
   radar_data = [rx, tx];
-  RadarChart("switch-chart-" + fix_name(data.dpid), radar_data);
+  radar = RadarChart();
+  radar.init("switch-chart-" + fix_name(data.dpid), radar_data);
+  radar;
 }
 
 function rebuild_switches_carousel() {
